@@ -9,6 +9,7 @@ import {
   TouchableHighlight,
   TouchableOpacity,
   TouchableNativeFeedback,
+  Button,
 } from "react-native";
 
 export default function App() {
@@ -57,11 +58,13 @@ export default function App() {
         />
       </TouchableHighlight> */}
 
-      <TouchableNativeFeedback>
+      {/* <TouchableNativeFeedback>
         <View
           style={{ width: 200, height: 70, backgroundColor: "dodgerblue" }}
         ></View>
-      </TouchableNativeFeedback>
+      </TouchableNativeFeedback> */}
+
+      <Button title="Click me" color="orange" onPress={() => console.log("Button tapped")} />
 
       <StatusBar style="auto" />
     </SafeAreaView>
