@@ -1,4 +1,4 @@
-import { StatusBar } from "expo-status-bar";
+// import { StatusBar } from "expo-status-bar";
 import {
   StyleSheet,
   Text,
@@ -10,19 +10,24 @@ import {
   TouchableOpacity,
   TouchableNativeFeedback,
   Button,
-  Alert
+  Alert,
+  Platform,
+  StatusBar,
+  Dimensions
 } from "react-native";
 
 export default function App() {
   // let x = 1;
+
+  console.log(Dimensions.get("screen"));
 
   const handlePress = () => {
     console.log("Key was pressed");
   };
 
   return (
-    <SafeAreaView style={[ containerStyle, styles.container ]}>
-      <Text>Hello World!</Text>
+    <SafeAreaView style={styles.container }>
+      {/* <Text>Hello World!</Text> */}
       {/* <Image source={require("./assets/favicon.png")}/> */}
       {/* <TouchableWithoutFeedback onPress={() => console.log("Image Tapped")}>
         <Image
@@ -80,13 +85,16 @@ export default function App() {
       /> */}
 
        {/* Alert.alert("title", "message", call-back-function) - Alert.prompt() 0nly works on ios, not yet on android */} 
-       <Button title="Click me" 
+       {/* <Button title="Click me" 
         color="orange" 
         onPress={() => Alert.prompt("My Title", "My Message", text => console.log(text))
         } 
-      />
+      /> */}
 
-      <StatusBar style="auto" />
+      {/* <StatusBar style="auto" /> */}
+
+      <View style={{ backgroundColor: "dodgerblue", width: 180, height: 70}}></View>
+      <View style={{ backgroundColor: "azure", width: "50%", height: 70}}></View>
     </SafeAreaView>
   );
 }
@@ -97,7 +105,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "blue",
-    alignItems: "center",
-    justifyContent: "center",
+    // paddingTop: Platform.OS === "android" ? 30 : 0, 
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
 });
