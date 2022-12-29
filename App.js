@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import { StyleSheet, Text, View, Image, SafeAreaView } from "react-native";
 
 export default function App() {
   console.log("App Executed");
@@ -16,10 +16,18 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text numberOfLines={1} onPress={handlePress}>
-        I need to get to the tutorial pretty quick and finish it before 31st
-        decebmer 2022.
+      <Text>
+        Hello World!
       </Text>
+      {/* <Image source={require("./assets/favicon.png")}/> */}
+      <Image 
+      blurRadius={10}
+      fadeDuration={1000} //doesnt work on ios
+      source={{
+        width: 250,
+        height: 300,
+        uri: "https://picsum.photos/200/300"
+      }}/>
       <StatusBar style="auto" />
     </SafeAreaView>
   );
@@ -29,7 +37,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "dodgerblue",
-    // alignItems: "center",
-    // justifyContent: "center",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
