@@ -21,7 +21,7 @@ export default function App() {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={[ containerStyle, styles.container ]}>
       <Text>Hello World!</Text>
       {/* <Image source={require("./assets/favicon.png")}/> */}
       {/* <TouchableWithoutFeedback onPress={() => console.log("Image Tapped")}>
@@ -91,10 +91,12 @@ export default function App() {
   );
 }
 
+const containerStyle = { backgroundColor: "red"}
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "pink",
+    backgroundColor: "blue",
     alignItems: "center",
     justifyContent: "center",
   },
