@@ -10,6 +10,7 @@ import {
   TouchableOpacity,
   TouchableNativeFeedback,
   Button,
+  Alert
 } from "react-native";
 
 export default function App() {
@@ -64,7 +65,26 @@ export default function App() {
         ></View>
       </TouchableNativeFeedback> */}
 
-      <Button title="Click me" color="orange" onPress={() => console.log("Button tapped")} />
+      {/* <Button title="Click me" color="orange" onPress={() => console.log("Button tapped")} /> */}
+      {/* <Button title="Click me" color="orange" onPress={() => alert("Button tapped")} /> */}
+
+
+      
+      {/* Alert.alert("title", "message", [{text: "yes", onPress: function}, {text: "no", onPress: function}]) */}
+      {/* <Button title="Click me" 
+        color="orange" 
+        onPress={() => Alert.alert("My Title", "My Message", [
+          {text: "Yes", onPress: () => console.log("Yes")},
+          {text: "No", onPress: () => console.log("No")}
+        ])} 
+      /> */}
+
+       {/* Alert.alert("title", "message", call-back-function) - Alert.prompt() 0nly works on ios, not yet on android */} 
+       <Button title="Click me" 
+        color="orange" 
+        onPress={() => Alert.prompt("My Title", "My Message", text => console.log(text))
+        } 
+      />
 
       <StatusBar style="auto" />
     </SafeAreaView>
