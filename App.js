@@ -1,4 +1,6 @@
 // import { StatusBar } from "expo-status-bar";
+// import { useDimensions } from "@react-native-community/hooks";
+
 import {
   StyleSheet,
   Text,
@@ -15,18 +17,22 @@ import {
   StatusBar,
   Dimensions
 } from "react-native";
+// import OrientationLocker from ' v     react-native-orientation-locker';
 
-export default function App() {
+
+// export default function App() {
   // let x = 1;
 
-  console.log(Dimensions.get("screen"));
+  // console.log(Dimensions.get("screen"));
 
-  const handlePress = () => {
-    console.log("Key was pressed");
-  };
+  // console.log(useDimensions());
 
-  return (
-    <SafeAreaView style={styles.container }>
+  // const handlePress = () => {
+  //   console.log("Key was pressed");
+  // };
+
+  // return (
+    // <SafeAreaView style={styles.container }>
       {/* <Text>Hello World!</Text> */}
       {/* <Image source={require("./assets/favicon.png")}/> */}
       {/* <TouchableWithoutFeedback onPress={() => console.log("Image Tapped")}>
@@ -93,11 +99,12 @@ export default function App() {
 
       {/* <StatusBar style="auto" /> */}
 
-      <View style={{ backgroundColor: "dodgerblue", width: 180, height: 70}}></View>
-      <View style={{ backgroundColor: "azure", width: "50%", height: 70}}></View>
-    </SafeAreaView>
-  );
-}
+      // <View style={{ backgroundColor: "dodgerblue", width: 180, height: 70}}></View>
+      // <View style={{ backgroundColor: "azure", width: "50%", height: 70}}></View>
+    // </SafeAreaView>
+
+  // );
+// }
 
 const containerStyle = { backgroundColor: "red"}
 
@@ -109,3 +116,28 @@ const styles = StyleSheet.create({
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
 });
+
+
+
+
+export default function Flex() {
+  return(
+    <View style={{
+      backgroundColor: "#ffffff",
+      flex: 1
+    }}>
+      <View style={{
+        backgroundColor: "dodgerblue",
+        flex: 2
+      }} />
+      <View style={{
+        backgroundColor: "gold",
+        flex: 1
+      }} />
+      <View style={{
+        backgroundColor: "tomato",
+        flex: 1
+      }} />
+    </View>
+  );
+};
