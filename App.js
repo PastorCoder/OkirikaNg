@@ -124,19 +124,22 @@ export default function Flex() {
   return(
     <View style={{
       backgroundColor: "#ffffff",
-      flex: 1
+      flexDirection: "row"
     }}>
       <View style={{
         backgroundColor: "dodgerblue",
-        flex: 2
+        height: 100,
+        width: 100
       }} />
       <View style={{
         backgroundColor: "gold",
-        flex: 1
+        height: 100,
+        width: 100
       }} />
       <View style={{
         backgroundColor: "tomato",
-        flex: 1
+        height: 100,
+        width: 100
       }} />
     </View>
   );
