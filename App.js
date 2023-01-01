@@ -124,20 +124,35 @@ export default function Flex() {
   return(
     <View style={{
       backgroundColor: "#ffffff",
-      flexDirection: "row"
-    }}>
+      flexDirection: "row", //primary (horizontal axis)
+      justifyContent: "center", // main
+      alignItems: "center", //secondary(vertical axis )
+      alignContent: "center",
+      flexWrap: "wrap",
+    }}>             
       <View style={{
         backgroundColor: "dodgerblue",
         height: 100,
-        width: 100
+        width: 300,
+        alignSelf: "center"
       }} />
       <View style={{
         backgroundColor: "gold",
         height: 100,
-        width: 100
+        width: 200
       }} />
       <View style={{
         backgroundColor: "tomato",
+        height: 100,
+        width: 100
+      }} />
+      <View style={{
+        backgroundColor: "grey",
+        height: 100,
+        width: 100
+      }} />
+      <View style={{
+        backgroundColor: "greenyellow",
         height: 100,
         width: 100
       }} />
